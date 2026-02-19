@@ -62,8 +62,8 @@ function App() {
   }, []);
 
   return (
-    <div style={styles.wrapper}>
-      <div style={styles.card}>
+    <div style={styles.wrapper} className="app-wrapper">
+      <div style={styles.card} className="app-card">
         <div style={styles.header}>
           <h1 style={styles.title}>مصحف عشوائي 📖</h1>
         </div>
@@ -116,7 +116,7 @@ function App() {
 
 const styles = {
   wrapper: {
-    minHeight: "100vh",
+    minHeight: "100dvh",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
