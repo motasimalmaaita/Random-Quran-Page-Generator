@@ -1,22 +1,62 @@
-/* Reset بسيط */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* خلفية التطبيق */
+html,
+body {
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   background: radial-gradient(circle at top, #1f2933, #020617);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  display: block;
+  margin: 0;
+
+  overflow-x: hidden;
 }
 
-/* لازم root ياخذ كامل الشاشة */
 #root {
   width: 100%;
   min-height: 100vh;
+}
+
+@media (max-width: 480px) {
+  .quran-card {
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .quran-title {
+    font-size: 20px !important;
+  }
+
+  .quran-button {
+    font-size: 15px !important;
+    padding: 10px 12px !important;
+  }
+
+  .quran-page-number {
+    font-size: 40px !important;
+  }
+
+  .quran-basmala {
+    font-size: 20px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .quran-content {
+    font-size: 18px !important;
+    line-height: 2.2 !important;
+  }
+
+  .quran-page-content {
+    padding: 14px !important;
+    max-height: 55vh !important;
+    overflow-y: auto !important;
+  }
 }
