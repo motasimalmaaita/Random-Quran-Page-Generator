@@ -9,7 +9,6 @@
   #root {
     height: 100dvh;
     display: flex;
-    width: 100%;
   }
 
   .app-wrapper {
@@ -17,21 +16,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px !important;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    padding: 4px !important;  
   }
 
   .app-card {
-    width: 100% !important;        
-    max-width: 100% !important;    
-    height: 95dvh !important;
+    width: 100% !important;
+    height: 98dvh !important; 
+    padding: 12px !important;  
     display: flex !important;
     flex-direction: column !important;
-    padding: 16px !important;
     overflow: hidden !important;
-    box-sizing: border-box;        
   }
 
   .app-card > div[style*="linear-gradient"] {
@@ -39,15 +33,27 @@
     flex-direction: column !important;
     flex: 1 !important;
     overflow: hidden !important;
-    min-width: 0;                  
+    padding: 10px !important; 
+  }
+
+  .app-card p[style*="fontSize: 48px"] {
+    font-size: 34px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .app-card p[style*="fontSize: 16px"] {
+    font-size: 13px !important;
+  }
+
+  .app-card div[style*="rgba(251, 191, 36"] p {
+    font-size: 18px !important;
   }
 
   .page-content {
-    flex: 1 !important;
+    flex: 1.5 !important;  
     overflow-y: auto !important;
-    overflow-x: hidden !important;   
     -webkit-overflow-scrolling: touch !important;
-    min-height: 0 !important;
+    padding: 18px !important; 
   }
 
 }
