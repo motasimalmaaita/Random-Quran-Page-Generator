@@ -1,170 +1,44 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  min-height: 100dvh;
-  background: radial-gradient(circle at top, #1f2933, #020617);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-
-  display: block;
-  margin: 0;
-
-  overflow-x: hidden;
-}
-
-#root {
-  width: 100%;
-  min-height: 100dvh;
-}
-
 @media (max-width: 480px) {
 
-  html,
-  body {
-    height: 100dvh;
+  html, body {
+    height: 100%;
     overflow: hidden;
-    position: fixed;
-    width: 100%;
   }
 
   #root {
     height: 100dvh;
-    overflow: hidden;
+    display: flex;
   }
 
-  /* Wrapper mobile styles */
   .app-wrapper {
-    min-height: 100dvh !important;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px !important;
   }
 
-  /* Card mobile styles */
   .app-card {
-    width: min(94vw, 420px) !important;
-    height: calc(100dvh - 16px) !important;
+    width: 95vw !important;
+    height: 95dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
     padding: 16px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    max-width: none !important;
-  }
-
-  /* Header mobile styles */
-  .app-card>div:first-child {
-    margin-bottom: 10px !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Title mobile styles */
-  .app-card h1 {
-    font-size: 20px !important;
-  }
-
-  /* Button mobile styles */
-  .app-card button {
-    font-size: 15px !important;
-    padding: 10px 12px !important;
-    margin-top: 8px !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Error message mobile styles */
-  .app-card>div[style*="background: rgba(239, 68, 68"] {
-    padding: 10px !important;
-    margin-bottom: 12px !important;
-    font-size: 13px !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Page box mobile styles - target the div with gradient background */
-  .app-card>div[style*="linear-gradient(135deg, rgba(59,130,246"] {
-    margin-top: 12px !important;
-    padding: 12px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    flex: 1 !important;
-    min-height: 0 !important;
     overflow: hidden !important;
   }
 
-  /* Page header mobile styles */
-  .app-card>div[style*="linear-gradient"]>div:first-child {
-    margin-bottom: 12px !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Page number mobile styles */
-  .app-card>div[style*="linear-gradient"]>div:first-child>p:first-child {
-    font-size: 36px !important;
-    margin: 0 0 6px !important;
-  }
-
-  /* Page label mobile styles */
-  .app-card>div[style*="linear-gradient"]>div:first-child>p:last-child {
-    font-size: 14px !important;
-    margin: 4px 0 !important;
-  }
-
-  /* Basmala box mobile styles */
-  .app-card>div[style*="linear-gradient"]>div[style*="background: rgba(251, 191, 36"] {
-    margin: 12px 0 !important;
-    padding: 12px !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Basmala text mobile styles */
-  .app-card>div[style*="linear-gradient"]>div[style*="background: rgba(251, 191, 36"] p {
-    font-size: 20px !important;
-    letter-spacing: 1px !important;
-  }
-
-  /* Page content mobile styles - the scrollable area */
-  .app-card>div[style*="linear-gradient"]>div[style*="background: rgba(15, 23, 42, 0.5)"] {
-    margin-top: 12px !important;
-    padding: 14px !important;
+  .app-card > div[style*="linear-gradient"] {
+    display: flex !important;
+    flex-direction: column !important;
     flex: 1 !important;
-    overflow: auto !important;
+    overflow: hidden !important;
+  }
+
+  .page-content {
+    flex: 1 !important;
+    overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
     min-height: 0 !important;
-    max-height: 100% !important;
   }
 
-  /* Content text mobile styles */
-  .app-card>div[style*="linear-gradient"]>div[style*="background: rgba(15, 23, 42, 0.5)"]>div {
-    font-size: 18px !important;
-    line-height: 2.4 !important;
-    word-wrap: break-word !important;
-    max-width: 100% !important;
-  }
-
-  /* Ayah container and text mobile styles */
-  .app-card>div[style*="linear-gradient"]>div[style*="background: rgba(15, 23, 42, 0.5)"] span {
-    word-wrap: break-word !important;
-    max-width: 100% !important;
-  }
-
-  /* Ayah container margin */
-  .app-card>div[style*="linear-gradient"]>div[style*="background: rgba(15, 23, 42, 0.5)"]>div>span[style*="marginLeft: 8px"] {
-    margin-left: 6px !important;
-  }
-
-  /* Ayah number mobile styles */
-  .app-card>div[style*="linear-gradient"]>div[style*="background: rgba(15, 23, 42, 0.5)"]>div>span>span:last-child {
-    font-size: 13px !important;
-    margin-left: 3px !important;
-  }
-
-  /* Note mobile styles */
-  .app-card>div[style*="linear-gradient"]>p:last-child {
-    margin: 12px 0 0 !important;
-    font-size: 11px !important;
-    flex-shrink: 0 !important;
-  }
 }

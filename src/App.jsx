@@ -95,7 +95,7 @@ function App() {
               </div>
             )}
 
-            <div style={styles.pageContent}>
+            <div style={styles.pageContent} className="page-content">
               <div style={styles.contentText}>
                 {currentPage.content.map((ayah, index) => (
                   <span key={index} style={styles.ayahContainer}>
