@@ -3,11 +3,13 @@
   html, body {
     height: 100%;
     overflow: hidden;
+    margin: 0;
   }
 
   #root {
     height: 100dvh;
     display: flex;
+    width: 100%;
   }
 
   .app-wrapper {
@@ -16,15 +18,20 @@
     align-items: center;
     justify-content: center;
     padding: 8px !important;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .app-card {
-    width: 95vw !important;
+    width: 100% !important;        
+    max-width: 100% !important;    
     height: 95dvh !important;
     display: flex !important;
     flex-direction: column !important;
     padding: 16px !important;
     overflow: hidden !important;
+    box-sizing: border-box;        
   }
 
   .app-card > div[style*="linear-gradient"] {
@@ -32,11 +39,13 @@
     flex-direction: column !important;
     flex: 1 !important;
     overflow: hidden !important;
+    min-width: 0;                  
   }
 
   .page-content {
     flex: 1 !important;
     overflow-y: auto !important;
+    overflow-x: hidden !important;   
     -webkit-overflow-scrolling: touch !important;
     min-height: 0 !important;
   }

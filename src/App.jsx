@@ -65,7 +65,7 @@ function App() {
     <div style={styles.wrapper} className="app-wrapper">
       <div style={styles.card} className="app-card">
         <div style={styles.header}>
-          <h1 style={styles.title}>مصحف عشوائي 📖</h1>
+          <h1 style={styles.title}>المصحف📖</h1>
         </div>
 
         {error && <div style={styles.error}>{error}</div>}
